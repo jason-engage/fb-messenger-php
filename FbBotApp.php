@@ -146,7 +146,7 @@ class FbBotApp
       * @param Message $message
       * @return array
       */
-     public function debug($fb_id, $message)
+     public function debug($fb_id, $message, $notification_type = "REGULAR")
      {
 
           $responses = [];
