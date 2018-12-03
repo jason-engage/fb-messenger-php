@@ -159,7 +159,7 @@ class FbBotApp
 
           for ($x=0; $x<$pages; $x++) {
 
-              $responses[] = $this->send( new Message($fb_id,trim(substr( json_encode( $message, JSON_UNESCAPED_SLASHES ), $x*$maxlength, $maxlength),'"'), false, "ISSUE_RESOLUTION", $notification_type, "MESSAGE_TAG" ) );
+              $responses[] = $this->send( new Message($fb_id,trim(substr( json_encode( $message, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_LINE_TERMINATORS ), $x*$maxlength, $maxlength),'"'), false, "ISSUE_RESOLUTION", $notification_type, "MESSAGE_TAG" ) );
 
           }
 
